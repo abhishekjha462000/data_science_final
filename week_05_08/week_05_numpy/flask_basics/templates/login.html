@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+          margin: 0px;
+          padding: 0px;
+      }
+      body {
+          font-family: "Caveat", cursive;
+      }
+      div {
+          margin-bottom: 20px;
+      }
+      form > button {
+          background-color: lightseagreen;
+          font-weight: 500;
+          font-size: 20px;
+          border: 2px solid rgb(30, 199, 117);
+          border-radius: 30px;
+          padding: 10px;
+      }
+
+      form > button:hover {
+          font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>NLP App</h1>
+    <form action="/form" method="post">
+      <div>
+        <label for="username">Enter the name</label><br />
+        <input type="text" id="username" name="name" required />
+      </div>
+      <div>
+        <label for="userpassword">Enter the password</label><br />
+        <input type="password" id="userpassword" name="password" required />
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
