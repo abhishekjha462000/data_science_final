@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Register</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,8 +45,12 @@
     <main>
       <h1>NLP App</h1>
 
-      <h3>Login Here</h3>
-      <form action="" method="">
+      <h3>Register Here</h3>
+      <form action="/perform_registration" method="post">
+        <div>
+          <label for="username">Enter the name</label><br />
+          <input type="text" name="name" id="username" />
+        </div>
         <div>
           <label for="useremail">Enter the email</label><br />
           <input type="email" id="useremail" name="email" required />
@@ -58,8 +62,8 @@
         <button>Submit</button>
       </form>
 
-      <p>Not a member?</p>
-      <a href="/register">Register here</a>
+      <p>Already a member?</p>
+      <a href="/">Login here</a>
     </main>
   </body>
 </html>
