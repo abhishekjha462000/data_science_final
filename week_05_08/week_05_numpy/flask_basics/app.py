@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from db import Database
 
 app = Flask(__name__)
@@ -42,6 +42,7 @@ def perform_login():
         # we must now show the user profile
         name = dbo.find_user_name(email, password) # we will find a valid name as user is authenticated
         return render_template("profile.html", name = name)
+        
     else:
         # It means that we could not find the user in the database
         # we cannot return the user profile
