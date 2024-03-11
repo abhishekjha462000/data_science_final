@@ -46,7 +46,11 @@
       <h1>NLP App</h1>
 
       <h3>Login Here</h3>
-      <form action="" method="">
+
+      {% if message %}
+        <p>{{message}}</p>
+      {% endif %}
+      <form action="/perform_login" method="post">
         <div>
           <label for="useremail">Enter the email</label><br />
           <input type="email" id="useremail" name="email" required />

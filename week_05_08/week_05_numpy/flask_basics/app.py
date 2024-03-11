@@ -24,12 +24,27 @@ def perform_registration():
     response = dbo.insert(name, email, password)
 
     if response:
-        return {"name": name, "email": email, "password": password}
-    
-    return "<h1>You already have an account</h1>"
+        # This means that the registration was successfull and hence we must go to the login page
+        return render_template("login.html", message = "Registration is successfull, you may now proceed to login")
+    else:
+        # This means that the email was already present in the database and there is no need for registration
+        return render_template("register.html", message = "Email already exits. Go to login page")
 
+@app.route("/perform_login", methods = ["post"])
+def perform_login():
+    email = request.form.get("email")
+    password = request.form.get("password")
 
-    
+    response = dbo.search(email, password)
 
+    if response:
+        # It means that we found the user in the database
+        # we must now show the user profile
+        name = dbo.find_user_name(email, password) # we will find a valid name as user is authenticated
+        return render_template("profile.html", name = name)
+    else:
+        # It means that we could not find the user in the database
+        # we cannot return the user profile
+        return render_template("login.html", message = "Email or password is wrong...")
 
 app.run(debug = True)

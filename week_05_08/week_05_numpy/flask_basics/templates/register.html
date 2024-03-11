@@ -46,6 +46,9 @@
       <h1>NLP App</h1>
 
       <h3>Register Here</h3>
+      {% if message %}
+        <p>{{message}}</p>
+      {% endif %}
       <form action="/perform_registration" method="post">
         <div>
           <label for="username">Enter the name</label><br />
