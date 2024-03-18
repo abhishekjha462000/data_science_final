@@ -1,2 +1,2 @@
-### Week 6 Schedule
+### Week 7 Schedule
 ![image info](./schedule.PNG)
