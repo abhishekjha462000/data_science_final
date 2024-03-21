@@ -1,0 +1,5 @@
+LaTeX - https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX.3F
+
+Markdown - https://www.markdownguide.org/basic-syntax/#images-1
+
+Dataset - https://www.kaggle.com/datasets/sudalairajkumar/indian-startup-funding
