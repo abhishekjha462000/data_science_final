@@ -1,0 +1,6 @@
+name,age,college
+abhishek,23,DTU
+sameer,23,DTU
+daniyaal,23,MIT,, # This is the bad row, this will give us an error while importing the dataset.
+siddharth,23,Harvard
+viraj sehgal,24,oxford
