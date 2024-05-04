@@ -1,0 +1,8 @@
+SELECT PatientID, region, bmi, highest_bmi FROM (SELECT *,
+FIRST_VALUE(bmi) 
+OVER(
+		PARTITION BY region ORDER BY bmi 
+        DESC ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING
+	) AS highest_bmi
+FROM insurance_data) AS t
+WHERE t.bmi = t.highest_bmi;
